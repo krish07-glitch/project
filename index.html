@@ -1,346 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krish Parmar | Creative Developer & Content Enthusiast</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* CSS resets for a clean slate */
-        body, h1, h2, p, ul { margin: 0; padding: 0; }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            scroll-behavior: smooth; /* Smooth scrolling for navigation */
-            background-color: #fff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krish Parmar</title>
 
-        /* Reusable typography and layout classes */
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-        /* The bold header font style */
-        .archivo-font {
-            font-family: 'Archivo Black', sans-serif;
-            font-weight: 400;
-            letter-spacing: -2px; /* Replicating the tight tracking */
-            color: #000;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-        /* Header / Nav Section (Based on image_0.png) */
-        header {
-            background-color: #fff;
-            padding: 20px 0;
-            border-bottom: 1px solid #f0f0f0;
-            position: fixed; /* Keep nav visible on scroll */
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
+body{
+  font-family:'Inter', sans-serif;
+  background:#fff;
+  color:#000;
+  overflow-x:hidden;
+}
 
-        /* Hero Section (Based on image_0.png) */
-        .hero {
-            position: relative;
-            background: url('https://images.unsplash.com/photo-1543269602-aec6f243a493?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
-            height: 90vh; /* Adjust height based on preference */
-            margin-top: 80px; /* Offset for fixed header */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
-        /* The dark overlay from the image */
-        .hero-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 1;
-        }
-        .hero-content {
-            z-index: 2;
-            position: relative;
-        }
-        .hero-title {
-            font-size: 4rem; /* Match large bold text */
-            margin-bottom: 15px;
-            color: #fff;
-            line-height: 1.1;
-        }
-        .hero-subtitle {
-            font-size: 1.1rem;
-            font-weight: 400;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:30px 80px;
+  font-weight:600;
+  position:fixed;
+  width:100%;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
 
-        /* About Section (Based on image_2.png) */
-        .about {
-            padding: 100px 0;
-            background-color: #f9f9f9;
-        }
-        .about .container {
-            text-align: center;
-        }
-        .about-title {
-            font-size: 3rem;
-            margin-bottom: 30px;
-        }
-        .about-text {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            text-align: left; /* Text from image_2 is left-aligned */
-            font-size: 1rem;
-            color: #444;
-        }
-        .btn-black {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #000;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            border-radius: 30px; /* Pill shape */
-            text-transform: uppercase;
-        }
+nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#000;
+}
 
-        /* Experience Section (Based on image_1.png) */
-        .experience {
-            padding: 100px 0;
-            background-color: #fff;
-        }
-        .exp-main-title {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            margin-bottom: 60px;
-        }
-        .exp-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns as pictured */
-            gap: 40px;
-        }
-        .exp-col {
-            text-align: left;
-        }
-        .exp-col h3 {
-            font-size: 2rem;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .exp-col p {
-            font-size: 0.9rem;
-            color: #666;
-        }
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
+  display:flex;
+  align-items:center;
+  padding:0 80px;
+}
 
-        /* Contact Section (Based on image_3.png) */
-        .contact {
-            padding: 100px 0 60px;
-            background-color: #f9f9f9;
-            border-top: 1px solid #f0f0f0;
-        }
-        .contact .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .contact-cta {
-            font-size: 3rem;
-            flex-basis: 60%;
-            margin-bottom: 40px;
-        }
-        .contact-details {
-            text-align: right; /* Aligned to the right as in image */
-            flex-basis: 35%;
-        }
-        .contact-details-title {
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-        .contact-details a {
-            text-decoration: underline;
-            color: #333;
-            font-weight: bold;
-            display: block;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-        .contact-details p {
-            font-size: 0.9rem;
-            color: #333;
-        }
+.hero h1{
+  font-family:'Anton', sans-serif;
+  font-size:110px;
+  line-height:0.9;
+  letter-spacing:-2px;
+}
 
-        /* Footer Section */
-        footer {
-            padding: 30px 0;
-            background-color: #fff;
-            text-align: center;
-            border-top: 1px solid #f0f0f0;
-        }
-        footer p {
-            font-size: 0.8rem;
-            color: #888;
-        }
+/* EXPERIENCE */
+.section{
+  padding:140px 80px;
+}
 
-        /* Optional 'Back to Top' Button */
-        #backToTop {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: 1001;
-        }
-        #backToTop.show {
-            opacity: 0.7;
-        }
-        #backToTop:hover {
-            opacity: 1;
-        }
+.section h2{
+  font-family:'Anton';
+  font-size:100px;
+  margin-bottom:80px;
+}
 
-        /* Simple responsiveness for mobile devices */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .exp-grid { grid-template-columns: 1fr; }
-            .about-title, .exp-main-title, .contact-cta { font-size: 2rem; }
-            .contact .container { flex-direction: column; text-align: left; }
-            .contact-details { text-align: left; margin-top: 20px; }
-        }
-    </style>
+.grid{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+}
+
+.box{
+  width:45%;
+}
+
+.box h3{
+  font-family:'Anton';
+  font-size:50px;
+  line-height:1;
+}
+
+.box p{
+  margin-top:30px;
+  color:#333;
+  max-width:400px;
+}
+
+/* ABOUT */
+.about{
+  background:#f4f4f4;
+  padding:140px 80px;
+  display:flex;
+  justify-content:center;
+}
+
+.about-container{
+  background:#fff;
+  padding:80px;
+  max-width:800px;
+  text-align:center;
+}
+
+.about h2{
+  font-family:'Anton';
+  font-size:70px;
+}
+
+.about p{
+  margin-top:20px;
+  line-height:1.8;
+}
+
+/* CONTACT */
+.contact{
+  padding:140px 80px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.contact h2{
+  font-family:'Anton';
+  font-size:80px;
+}
+
+.contact-right h3{
+  font-family:'Anton';
+}
+
+.contact-right p{
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero h1{font-size:60px;}
+  .section h2{font-size:60px;}
+  .grid{flex-direction:column;}
+  .contact{flex-direction:column;gap:40px;}
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <h1 class="logo archivo-font">Krish Parmar</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<nav>
+  <div>KRISH PARMAR</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h2 class="hero-title archivo-font">Creative Developer & Content Enthusiast</h2>
-            <p class="hero-subtitle">Blending creativity with technology to build engaging and impactful experiences.</p>
-        </div>
-    </section>
+<section class="hero">
+  <h1>
+    Creative Developer &<br>
+    Content Enthusiast
+  </h1>
+</section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="about-title archivo-font">About ME</h2>
-            <p class="about-text">
-                I am a motivated and enthusiastic fresher with a strong interest in content creation, creative work, and event-related activities. I enjoy developing ideas, working on creative concepts, and contributing to projects that are engaging and impactful. Along with my creative abilities, I also have foundational technical knowledge and problem-solving skills gained through programming experience. I am responsible, organized, and comfortable working in a team. As a beginner, I am eager to gain practical experience, enhance my skills, and actively contribute to the committee’s activities.
-            </p>
-            <a href="#" class="btn-black">Learn More</a>
-        </div>
-    </section>
+<section class="section">
+  <h2>EXPERIENCE</h2>
 
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="exp-main-title archivo-font">EXPERIENCE</h2>
-            <div class="exp-grid">
-                <div class="exp-col">
-                    <h3 class="archivo-font">EVENT<br>MANAGEMENT</h3>
-                    <p>Assisted in planning and organizing college events and coordinated with team members.</p>
-                </div>
-                <div class="exp-col">
-                    <h3 class="archivo-font">Script Writer<br>& Performer</h3>
-                    <p>Won multiple 1st prizes in drama competitions for writing scripts and performing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="grid">
+    <div class="box">
+      <h3>EVENT<br>MANAGEMENT</h3>
+      <p>Assisted in planning and organizing college events and coordinated with team members.</p>
+    </div>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="contact-cta archivo-font">Let's Work Together</h2>
-            <div class="contact-details">
-                <h3 class="contact-details-title archivo-font">Contact</h3>
-                <a href="mailto:krish105.com@gmail.com">krish105.com@gmail.com</a>
-                <p>+91 8928992207</p>
-            </div>
-        </div>
-    </section>
+    <div class="box">
+      <h3>Script Writer<br>& Performer</h3>
+      <p>Won multiple 1st prizes in drama competitions for writing scripts and performing.</p>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Krish Parmar. All rights reserved.</p>
-        </div>
-    </footer>
+<section id="about" class="about">
+  <div class="about-container">
+    <h2>About Me</h2>
+    <p>
+      I am Krish Parmar, a motivated and enthusiastic fresher with a strong interest in content creation, creative work, and event-related activities.
+      I enjoy developing ideas, working on creative concepts, and contributing to projects that are engaging and impactful.
+      Along with my creative abilities, I also have foundational technical knowledge in Python and C programming.
+      I am responsible, organized, and comfortable working in a team.
+      I am eager to gain practical experience, enhance my skills, and grow professionally.
+    </p>
+  </div>
+</section>
 
-    <button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
+<section id="contact" class="contact">
+  <h2>Let’s Work Together</h2>
 
-    <script>
-        // Smooth scrolling for anchor links (using native CSS is modern, but JS handles older browsers)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+  <div class="contact-right">
+    <h3>Contact</h3>
+    <p>krish105.com@gmail.com</p>
+    <p>+91 8928992207</p>
+  </div>
+</section>
 
-        // Back to Top functionality
-        const backToTopBtn = document.getElementById("backToTop");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                backToTopBtn.classList.add("show");
-            } else {
-                backToTopBtn.classList.remove("show");
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-    </script>
 </body>
 </html>
 
