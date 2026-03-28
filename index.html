@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krish Parmar | Creative Developer & Content Enthusiast</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS resets for a clean slate */
         body, h1, h2, p, ul { margin: 0; padding: 0; }
+
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             color: #333;
-            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+            scroll-behavior: smooth;
             background-color: #fff;
+
+            /* 🔥 ADDITION START */
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
 
-        /* Reusable typography and layout classes */
+        /* 🔥 ADDITION START */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: -1;
+        }
+        /* 🔥 ADDITION END */
+
         .container {
             width: 85%;
             max-width: 1200px;
@@ -28,38 +43,40 @@
             padding: 0 20px;
         }
 
-        /* The bold header font style */
         .archivo-font {
             font-family: 'Archivo Black', sans-serif;
             font-weight: 400;
-            letter-spacing: -2px; /* Replicating the tight tracking */
+            letter-spacing: -2px;
             color: #000;
         }
 
-        /* Header / Nav Section (Based on image_0.png) */
         header {
             background-color: #fff;
             padding: 20px 0;
             border-bottom: 1px solid #f0f0f0;
-            position: fixed; /* Keep nav visible on scroll */
+            position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
+
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-size: 1.5rem;
             text-transform: uppercase;
         }
+
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
         }
+
         nav a {
             text-decoration: none;
             color: #555;
@@ -67,35 +84,37 @@
             font-size: 0.9rem;
         }
 
-        /* Hero Section (Based on image_0.png) */
         .hero {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1604079628040-94301bb21b91?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
-    height: 90vh;
-    margin-top: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-}
-        /* The dark overlay from the image */
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1543269602-aec6f243a493?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
+            height: 90vh;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
+
         .hero-content {
             z-index: 2;
             position: relative;
         }
+
         .hero-title {
-            font-size: 4rem; /* Match large bold text */
+            font-size: 4rem;
             margin-bottom: 15px;
             color: #fff;
             line-height: 1.1;
         }
+
         .hero-subtitle {
             font-size: 1.1rem;
             font-weight: 400;
@@ -103,25 +122,28 @@
             margin: 0 auto;
         }
 
-        /* About Section (Based on image_2.png) */
         .about {
             padding: 100px 0;
             background-color: #f9f9f9;
         }
+
         .about .container {
             text-align: center;
         }
+
         .about-title {
             font-size: 3rem;
             margin-bottom: 30px;
         }
+
         .about-text {
             max-width: 700px;
             margin: 0 auto 40px;
-            text-align: left; /* Text from image_2 is left-aligned */
+            text-align: left;
             font-size: 1rem;
             color: #444;
         }
+
         .btn-black {
             display: inline-block;
             padding: 15px 30px;
@@ -130,217 +152,129 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 0.9rem;
-            border-radius: 30px; /* Pill shape */
+            border-radius: 30px;
             text-transform: uppercase;
         }
 
-        /* Experience Section (Based on image_1.png) */
         .experience {
             padding: 100px 0;
             background-color: #fff;
         }
+
         .exp-main-title {
             font-size: 3.5rem;
             text-transform: uppercase;
             margin-bottom: 60px;
         }
+
         .exp-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns as pictured */
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
-        .exp-col {
-            text-align: left;
-        }
+
         .exp-col h3 {
             font-size: 2rem;
             text-transform: uppercase;
             margin-bottom: 20px;
-            line-height: 1.2;
         }
+
         .exp-col p {
             font-size: 0.9rem;
             color: #666;
         }
 
-        /* Contact Section (Based on image_3.png) */
         .contact {
             padding: 100px 0 60px;
             background-color: #f9f9f9;
-            border-top: 1px solid #f0f0f0;
         }
+
         .contact .container {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-        }
-        .contact-cta {
-            font-size: 3rem;
-            flex-basis: 60%;
-            margin-bottom: 40px;
-        }
-        .contact-details {
-            text-align: right; /* Aligned to the right as in image */
-            flex-basis: 35%;
-        }
-        .contact-details-title {
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-        .contact-details a {
-            text-decoration: underline;
-            color: #333;
-            font-weight: bold;
-            display: block;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-        .contact-details p {
-            font-size: 0.9rem;
-            color: #333;
         }
 
-        /* Footer Section */
+        .contact-cta {
+            font-size: 3rem;
+        }
+
+        .contact-details {
+            text-align: right;
+        }
+
         footer {
             padding: 30px 0;
             background-color: #fff;
             text-align: center;
-            border-top: 1px solid #f0f0f0;
-        }
-        footer p {
-            font-size: 0.8rem;
-            color: #888;
         }
 
-        /* Optional 'Back to Top' Button */
-        #backToTop {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: 1001;
-        }
-        #backToTop.show {
-            opacity: 0.7;
-        }
-        #backToTop:hover {
-            opacity: 1;
-        }
-
-        /* Simple responsiveness for mobile devices */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .exp-grid { grid-template-columns: 1fr; }
-            .about-title, .exp-main-title, .contact-cta { font-size: 2rem; }
-            .contact .container { flex-direction: column; text-align: left; }
-            .contact-details { text-align: left; margin-top: 20px; }
-        }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <h1 class="logo archivo-font">Krish Parmar</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="container">
+        <h1 class="logo archivo-font">Krish Parmar</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h2 class="hero-title archivo-font">Creative Developer & Content Enthusiast</h2>
-            <p class="hero-subtitle">Blending creativity with technology to build engaging and impactful experiences.</p>
-        </div>
-    </section>
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h2 class="hero-title archivo-font">Creative Developer & Content Enthusiast</h2>
+        <p class="hero-subtitle">Blending creativity with technology to build engaging and impactful experiences.</p>
+    </div>
+</section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="about-title archivo-font">About ME</h2>
-            <p class="about-text">
-                I am a motivated and enthusiastic fresher with a strong interest in content creation, creative work, and event-related activities. I enjoy developing ideas, working on creative concepts, and contributing to projects that are engaging and impactful. Along with my creative abilities, I also have foundational technical knowledge and problem-solving skills gained through programming experience. I am responsible, organized, and comfortable working in a team. As a beginner, I am eager to gain practical experience, enhance my skills, and actively contribute to the committee’s activities.
-            </p>
-            <a href="#" class="btn-black">Learn More</a>
-        </div>
-    </section>
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="about-title archivo-font">About ME</h2>
+        <p class="about-text">
+            I am a motivated and enthusiastic fresher with a strong interest in content creation, creative work, and event-related activities...
+        </p>
+        <a href="#" class="btn-black">Learn More</a>
+    </div>
+</section>
 
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="exp-main-title archivo-font">EXPERIENCE</h2>
-            <div class="exp-grid">
-                <div class="exp-col">
-                    <h3 class="archivo-font">EVENT<br>MANAGEMENT</h3>
-                    <p>Assisted in planning and organizing college events and coordinated with team members.</p>
-                </div>
-                <div class="exp-col">
-                    <h3 class="archivo-font">Script Writer<br>& Performer</h3>
-                    <p>Won multiple 1st prizes in drama competitions for writing scripts and performing.</p>
-                </div>
+<section class="experience" id="experience">
+    <div class="container">
+        <h2 class="exp-main-title archivo-font">EXPERIENCE</h2>
+        <div class="exp-grid">
+            <div class="exp-col">
+                <h3 class="archivo-font">EVENT MANAGEMENT</h3>
+                <p>Assisted in planning and organizing college events...</p>
+            </div>
+            <div class="exp-col">
+                <h3 class="archivo-font">Script Writer & Performer</h3>
+                <p>Won multiple 1st prizes in drama competitions...</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="contact-cta archivo-font">Let's Work Together</h2>
-            <div class="contact-details">
-                <h3 class="contact-details-title archivo-font">Contact</h3>
-                <a href="mailto:krish105.com@gmail.com">krish105.com@gmail.com</a>
-                <p>+91 8928992207</p>
-            </div>
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="contact-cta archivo-font">Let's Work Together</h2>
+        <div class="contact-details">
+            <h3 class="archivo-font">Contact</h3>
+            <p>krish105.com@gmail.com</p>
+            <p>+91 8928992207</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Krish Parmar. All rights reserved.</p>
-        </div>
-    </footer>
+<footer>
+    <p>© 2026 Krish Parmar</p>
+</footer>
 
-    <button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
-
-    <script>
-        // Smooth scrolling for anchor links (using native CSS is modern, but JS handles older browsers)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Back to Top functionality
-        const backToTopBtn = document.getElementById("backToTop");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                backToTopBtn.classList.add("show");
-            } else {
-                backToTopBtn.classList.remove("show");
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-    </script>
 </body>
 </html>
 
