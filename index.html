@@ -3,86 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Krish Parmar | Portfolio</title>
+<title>Krish Parmar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --bg-color: #0a0a0a; /* ✅ DARK BACKGROUND */
-    --text-main: #ffffff;
-    --text-muted: #aaaaaa;
-    --accent: #ffffff;
-    --section-padding: 100px 10%;
-    --border-color: #222;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.6;
+body{
+  font-family:'Inter', sans-serif;
+  background:#fff;
+  color:#000;
+  overflow-x:hidden;
 }
 
 /* NAV */
-nav {
-    padding: 30px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0,0,0,0.7);
-    border-bottom: 1px solid var(--border-color);
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:30px 80px;
+  font-weight:600;
+  position:fixed;
+  width:100%;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+  z-index:1000;
 }
 
-.nav-links a {
-    color: var(--text-main);
-    margin-left: 30px;
-    text-decoration: none;
+nav a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#000;
 }
 
 /* HERO */
-.hero {
-    padding: 150px 10%;
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
+  display:flex;
+  align-items:center;
+  padding:0 80px;
 }
 
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+.hero h1{
+  font-family:'Anton', sans-serif;
+  font-size:110px;
+  line-height:0.9;
+  letter-spacing:-2px;
 }
 
-.hero p {
-    color: var(--text-muted);
+/* EXPERIENCE */
+.section{
+  padding:140px 80px;
 }
 
-/* PROJECTS */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
-    padding: 0 10% 100px;
+.section h2{
+  font-family:'Anton';
+  font-size:100px;
+  margin-bottom:80px;
 }
 
-.project-image {
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
+.grid{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
 }
 
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.box{
+  width:45%;
 }
 
-/* FOOTER */
-footer {
-    background: #000;
-    color: white;
-    text-align: center;
-    padding: 100px 10%;
+.box h3{
+  font-family:'Anton';
+  font-size:50px;
+  line-height:1;
+}
+
+.box p{
+  margin-top:30px;
+  color:#333;
+  max-width:400px;
+}
+
+/* ABOUT */
+.about{
+  background:#f4f4f4;
+  padding:140px 80px;
+  display:flex;
+  justify-content:center;
+}
+
+.about-container{
+  background:#fff;
+  padding:80px;
+  max-width:800px;
+  text-align:center;
+}
+
+.about h2{
+  font-family:'Anton';
+  font-size:70px;
+}
+
+.about p{
+  margin-top:20px;
+  line-height:1.8;
+}
+
+/* CONTACT */
+.contact{
+  padding:140px 80px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.contact h2{
+  font-family:'Anton';
+  font-size:80px;
+}
+
+.contact-right h3{
+  font-family:'Anton';
+}
+
+.contact-right p{
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero h1{font-size:60px;}
+  .section h2{font-size:60px;}
+  .grid{flex-direction:column;}
+  .contact{flex-direction:column;gap:40px;}
 }
 </style>
 </head>
@@ -90,55 +144,58 @@ footer {
 <body>
 
 <nav>
-    <div>KRISH PARMAR</div>
-    <div class="nav-links">
-        <a href="#work">Experience</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <div>KRISH PARMAR</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <section class="hero">
-    <h1>Creative Developer & Content Enthusiast</h1>
-    <p>Blending creativity with technology to build engaging and impactful experiences.</p>
+  <h1>
+    Creative Developer &<br>
+    Content Enthusiast
+  </h1>
 </section>
 
-<div style="padding:0 10%;">Experience</div>
+<section class="section">
+  <h2>EXPERIENCE</h2>
 
-<section id="work" class="projects">
-
-    <!-- ✅ IMAGE ADDED -->
-    <div>
-        <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-        </div>
-        <h3>College Event Management</h3>
-        <p>Assisted in planning and organizing college events and coordinated with team members.</p>
+  <div class="grid">
+    <div class="box">
+      <h3>EVENT<br>MANAGEMENT</h3>
+      <p>Assisted in planning and organizing college events and coordinated with team members.</p>
     </div>
 
-    <!-- ✅ IMAGE ADDED -->
-    <div>
-        <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754">
-        </div>
-        <h3>Script Writer & Performer</h3>
-        <p>Won multiple 1st prizes in drama competitions for writing scripts and performing.</p>
+    <div class="box">
+      <h3>Script Writer<br>& Performer</h3>
+      <p>Won multiple 1st prizes in drama competitions for writing scripts and performing.</p>
     </div>
-
+  </div>
 </section>
 
-<section id="about" style="padding:100px 10%;">
+<section id="about" class="about">
+  <div class="about-container">
     <h2>About Me</h2>
     <p>
-        I am a motivated and enthusiastic fresher with a strong interest in content creation,
-        creative work, and event management.
+      I am Krish Parmar, a motivated and enthusiastic fresher with a strong interest in content creation, creative work, and event-related activities.
+      I enjoy developing ideas, working on creative concepts, and contributing to projects that are engaging and impactful.
+      Along with my creative abilities, I also have foundational technical knowledge in Python and C programming.
+      I am responsible, organized, and comfortable working in a team.
+      I am eager to gain practical experience, enhance my skills, and grow professionally.
     </p>
+  </div>
 </section>
 
-<footer id="contact">
-    <h2>Let's work together.</h2>
+<section id="contact" class="contact">
+  <h2>Let’s Work Together</h2>
+
+  <div class="contact-right">
+    <h3>Contact</h3>
     <p>krish105.com@gmail.com</p>
-</footer>
+    <p>+91 8928992207</p>
+  </div>
+</section>
 
 </body>
 </html>
