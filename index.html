@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio | Hunter Style</title>
+    <title>Krish Parmar | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
@@ -34,7 +34,6 @@
             margin: 0 auto;
         }
 
-        /* --- NAVIGATION --- */
         nav {
             display: flex;
             justify-content: space-between;
@@ -42,36 +41,35 @@
             margin-bottom: 80px;
         }
 
-        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
+        .logo { font-weight: 800; font-size: 1.2rem; }
+
         .nav-links a {
             color: var(--text-dim);
             text-decoration: none;
             margin-left: 30px;
-            font-size: 0.9rem;
-            transition: 0.3s;
         }
-        .nav-links a:hover { color: var(--text-main); }
 
-        /* --- HERO SECTION --- */
         .hero {
             margin-bottom: 100px;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -2px;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 1.2rem;
             color: var(--text-dim);
-            max-width: 600px;
         }
 
-        /* --- GRID LAYOUT (The Hunter Aesthetic) --- */
+        .hero img {
+            margin-top: 30px;
+            width: 250px;
+            border-radius: 20px;
+            border: 2px solid #333;
+        }
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -83,123 +81,107 @@
             border: 1px solid var(--border);
             border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-decoration: none;
             color: inherit;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: #444;
         }
 
         .project-image {
             width: 100%;
             height: 300px;
-            background: #222; /* Placeholder */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #333;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-info {
             padding: 24px;
         }
 
-        .project-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-        }
-
-        .project-info p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
-
-        /* Large feature item */
-        .project-card.wide {
-            grid-column: span 2;
-        }
-
-        /* --- FOOTER --- */
         footer {
-            margin-top: 120px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
+            margin-top: 100px;
+            text-align: center;
             color: var(--text-dim);
-            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
-            .portfolio-grid { grid-template-columns: 1fr; }
-            .project-card.wide { grid-column: span 1; }
-            nav { flex-direction: column; gap: 20px; }
-            .nav-links { margin: 0; }
-            .nav-links a { margin: 0 15px; }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav>
-            <div class="logo">PORTFOLIO.</div>
-            <div class="nav-links">
-                <a href="#work">Work</a>
-                <a href="#about">About</a>
-                <a href="mailto:hello@example.com">Contact</a>
-            </div>
-        </nav>
+<div class="container">
 
-        <section class="hero">
-            <h1>Digital Designer & Developer.</h1>
-            <p>Creating purposeful digital experiences with a focus on clean aesthetics and functional simplicity.</p>
-        </section>
-
-        <div class="portfolio-grid" id="work">
-            <a href="#" class="project-card wide">
-                <div class="project-image">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <div class="project-info">
-                    <h3>C-Programming Framework</h3>
-                    <p>A deep dive into optimized system architecture and low-level logic.</p>
-                </div>
-            </a>
-
-            <a href="#" class="project-card">
-                <div class="project-image">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-                <div class="project-info">
-                    <h3>Circuit Analysis Tool</h3>
-                    <p>Visualizing complex electronic patterns and signal flow.</p>
-                </div>
-            </a>
-
-            <a href="#" class="project-card">
-                <div class="project-image">
-                    <i class="fa-solid fa-flask"></i>
-                </div>
-                <div class="project-info">
-                    <h3>Analytical Chemistry UI</h3>
-                    <p>Clean data visualization for lab research and experiments.</p>
-                </div>
-            </a>
+    <nav>
+        <div class="logo">KRISH.</div>
+        <div class="nav-links">
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="mailto:krish105@gmail.com">Contact</a>
         </div>
+    </nav>
 
-        <footer>
-            <p>&copy; 2026 Personal Portfolio</p>
-            <div class="socials">
-                <a href="#" style="color: inherit; margin-left: 20px;"><i class="fa-brands fa-github"></i></a>
-                <a href="#" style="color: inherit; margin-left: 20px;"><i class="fa-brands fa-linkedin"></i></a>
+    <section class="hero">
+        <h1>Creative Developer & Content Enthusiast</h1>
+        <p>I am passionate about content creation, creative work, and building engaging digital experiences.</p>
+        <img src="image.jpeg" alt="Krish Parmar">
+    </section>
+
+    <div class="portfolio-grid">
+
+        <a href="#" class="project-card">
+            <div class="project-image">
+                <img src="image.jpeg">
             </div>
-        </footer>
+            <div class="project-info">
+                <h3>Personal Portfolio Website</h3>
+                <p>A modern portfolio showcasing my skills, creativity, and development work.</p>
+            </div>
+        </a>
+
+        <a href="#" class="project-card">
+            <div class="project-image">
+                <img src="image.jpeg">
+            </div>
+            <div class="project-info">
+                <h3>Event Management Experience</h3>
+                <p>Assisted in planning and organizing college events and coordinated with team members.</p>
+            </div>
+        </a>
+
+        <a href="#" class="project-card">
+            <div class="project-image">
+                <img src="image.jpeg">
+            </div>
+            <div class="project-info">
+                <h3>Script Writing & Performance</h3>
+                <p>Won multiple 1st prizes in drama competitions for writing scripts and performing.</p>
+            </div>
+        </a>
+
+        <a href="#" class="project-card">
+            <div class="project-image">
+                <img src="image.jpeg">
+            </div>
+            <div class="project-info">
+                <h3>Skills</h3>
+                <p>C Programming, Python, Content Marketing, Content Strategy, Time Management</p>
+            </div>
+        </a>
+
     </div>
+
+    <footer>
+        <p>&copy; 2026 Krish Parmar | Mumbai</p>
+        <p>Contact: +91 8928992207</p>
+    </footer>
+
+</div>
 
 </body>
 </html>
